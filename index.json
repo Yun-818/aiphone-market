@@ -4,6 +4,18 @@
   "name": "公共集市",
   "items": [
     {
+      "id": "像素.aiphone",
+      "kind": "chat-theme",
+      "name": "像素",
+      "author": "",
+      "desc": "",
+      "tags": [],
+      "packVersion": "1.0.0",
+      "url": "./packs/%E5%83%8F%E7%B4%A0.aiphone.json",
+      "size": 11688,
+      "hash": "sha256:d10b4644dff84be173d08ccc6c5392052653813e011ce6d32ac4bf2a44c59230"
+    },
+    {
       "id": "我的主题.aiphone",
       "kind": "theme",
       "name": "我的主题",
