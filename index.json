@@ -28,6 +28,18 @@
       "hash": "sha256:d10b4644dff84be173d08ccc6c5392052653813e011ce6d32ac4bf2a44c59230"
     },
     {
+      "id": "冰蓝色清透雾感美化.aiphone",
+      "kind": "story-theme",
+      "name": "冰蓝色清透雾感美化",
+      "author": "",
+      "desc": "",
+      "tags": [],
+      "packVersion": "1.0.0",
+      "url": "./packs/%E5%86%B0%E8%93%9D%E8%89%B2%E6%B8%85%E9%80%8F%E9%9B%BE%E6%84%9F%E7%BE%8E%E5%8C%96.aiphone.json",
+      "size": 19780,
+      "hash": "sha256:a8a6f844c6313d00fdba67154d1573222df1b27edbda6db2200ccfd5676bf227"
+    },
+    {
       "id": "夏予哲.aiphone",
       "kind": "character",
       "name": "夏予哲",
