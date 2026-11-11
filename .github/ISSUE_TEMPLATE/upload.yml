@@ -1,0 +1,58 @@
+name: 投稿我的美化
+description: 上传一个集市包，机器人会自动校验并上架
+title: "[投稿] "
+labels: ["投稿"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        投稿前请确认：
+        1. 包是集市里导出的 `.aiphone` 文件
+        2. 包里有别人的东西、违规内容请勿提交
+        3. 单个包不超过 5MB
+
+  - type: input
+    id: name
+    attributes:
+      label: 包名称
+      placeholder: 海盐
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 主题
+        - 线上美化
+        - 线下美化
+        - 角色卡
+        - 世界书
+        - 预设
+        - 正则
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: 作者署名
+      placeholder: 留空则显示 GitHub 用户名
+
+  - type: textarea
+    id: desc
+    attributes:
+      label: 一句话说明
+      placeholder: 低饱和玻璃质感
+    validations:
+      required: true
+
+  - type: textarea
+    id: file
+    attributes:
+      label: 包文件
+      description: 把 .aiphone 文件直接拖进这个框，会自动生成链接
+      placeholder: 拖入文件后这里会出现链接
+    validations:
+      required: true
