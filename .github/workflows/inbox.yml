@@ -1,0 +1,75 @@
+name: accept-submission
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  accept:
+    if: contains(github.event.issue.title, '[投稿]') || contains(github.event.issue.labels.*.name, '投稿')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch and validate pack
+        id: inbox
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/inbox.mjs
+
+      - name: Rebuild index.json
+        if: success()
+        run: node scripts/build-index.mjs
+
+      - name: Commit
+        if: success()
+        run: |
+          if git diff --quiet; then
+            echo "没有变化"
+            exit 0
+          fi
+          git config user.name  "market-bot"
+          git config user.email "market-bot@users.noreply.github.com"
+          git add packs index.json
+          git commit -m "feat: accept submission #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const detail = fs.existsSync('.inbox-result') ? fs.readFileSync('.inbox-result', 'utf8') : '';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `已上架：${detail}\n\n几分钟内所有玩家的集市就能看到这个包。`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+
+      - name: Comment failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '自动上架失败。常见原因：没有附上 .aiphone 文件、文件不是集市包、或超过 5MB。\n请检查后重新编辑这条 issue（编辑会自动重试）。'
+            });
