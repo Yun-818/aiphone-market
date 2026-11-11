@@ -1,0 +1,57 @@
+{
+  "format": "aiphone-pack",
+  "version": 1,
+  "kind": "lorebook",
+  "meta": {
+    "name": "世界书 4",
+    "author": "",
+    "desc": "",
+    "tags": [],
+    "cover": "",
+    "packVersion": "1.0.0",
+    "minApp": 1,
+    "createdAt": 1794407983421
+  },
+  "payload": {
+    "book": {
+      "name": "世界书 4",
+      "desc": "",
+      "enabled": true,
+      "characterIds": []
+    },
+    "entries": [
+      {
+        "title": "1",
+        "content": "",
+        "trigger": "keyword",
+        "keys": [],
+        "secondaryKeys": [],
+        "logic": "any",
+        "caseSensitive": false,
+        "position": "after_char",
+        "depth": 0,
+        "role": "system",
+        "order": 10,
+        "enabled": true,
+        "comment": ""
+      },
+      {
+        "title": "111",
+        "content": "",
+        "trigger": "keyword",
+        "keys": [],
+        "secondaryKeys": [],
+        "logic": "any",
+        "caseSensitive": false,
+        "position": "after_char",
+        "depth": 0,
+        "role": "system",
+        "order": 0,
+        "enabled": true,
+        "comment": ""
+      }
+    ]
+  },
+  "refs": [],
+  "assets": []
+}
