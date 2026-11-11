@@ -4,6 +4,18 @@
   "name": "公共集市",
   "items": [
     {
+      "id": "世界书_4.aiphone",
+      "kind": "lorebook",
+      "name": "世界书 4",
+      "author": "",
+      "desc": "",
+      "tags": [],
+      "packVersion": "1.0.0",
+      "url": "./packs/%E4%B8%96%E7%95%8C%E4%B9%A6_4.aiphone.json",
+      "size": 1134,
+      "hash": "sha256:f37e02916dd8c75b9990c7f9bf07f1a4749e69763cc6532c0be34417821272e8"
+    },
+    {
       "id": "像素.aiphone",
       "kind": "chat-theme",
       "name": "像素",
