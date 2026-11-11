@@ -50,6 +50,18 @@
       "url": "./packs/%E6%88%91%E7%9A%84%E4%B8%BB%E9%A2%98.aiphone.json",
       "size": 62226,
       "hash": "sha256:4121b1bd40fce781fb67554656190ba368dc2fab867780e13fc9cb01e83b6b2b"
+    },
+    {
+      "id": "我的主题2.aiphone",
+      "kind": "theme",
+      "name": "我的主题2",
+      "author": "",
+      "desc": "",
+      "tags": [],
+      "packVersion": "1.0.0",
+      "url": "./packs/%E6%88%91%E7%9A%84%E4%B8%BB%E9%A2%982.aiphone.json",
+      "size": 651535,
+      "hash": "sha256:c54905fdcfda5dc63b44617c6a19dce181783e085e2fa2471797eb8260f8cd74"
     }
   ]
 }
