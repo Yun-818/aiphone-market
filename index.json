@@ -40,18 +40,6 @@
       "hash": "sha256:a8a6f844c6313d00fdba67154d1573222df1b27edbda6db2200ccfd5676bf227"
     },
     {
-      "id": "夏予哲.aiphone",
-      "kind": "character",
-      "name": "夏予哲",
-      "author": "",
-      "desc": "",
-      "tags": [],
-      "packVersion": "1.0.0",
-      "url": "./packs/%E5%A4%8F%E4%BA%88%E5%93%B2.aiphone.json",
-      "size": 846,
-      "hash": "sha256:5d37472849bcdae003ecd6979df9cb42714a59b235fc856a2b51fbd30d566ce0"
-    },
-    {
       "id": "我的主题.aiphone",
       "kind": "theme",
       "name": "我的主题",
